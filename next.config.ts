@@ -1,10 +1,9 @@
-const withPWA = require('next-pwa')({
-  dest: 'public',
-  register: true,
-  skipWaiting: true,
-  disable: process.env.NODE_ENV === 'development'
-})
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    // Isso aqui avisa a Vercel que está tudo certo usar o motor novo
+    turbopack: {},
+  },
+};
 
-module.exports = withPWA({
-  // Suas outras configurações aqui
-})
+export default nextConfig;
