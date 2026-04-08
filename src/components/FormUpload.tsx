@@ -16,7 +16,8 @@ export default function FormUpload({ id }: { id: number }) {
       setStatus('✅ Atualizado!');
       setTimeout(() => window.location.reload(), 1000);
     } else {
-      setStatus('❌ Erro: ' + res.error);
+      // Ajustado aqui: de res.error para res.message
+      setStatus('❌ Erro: ' + res.message);
     }
   }
 
