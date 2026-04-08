@@ -1,11 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   typescript: {
-    // Isso permite que o site suba mesmo se o TypeScript for chato
+    // Isso aqui é o "alvará" para o site subir mesmo se o inspetor reclamar
     ignoreBuildErrors: true,
   },
   eslint: {
-    // Ignora avisos de estilo para não travar a obra
     ignoreDuringBuilds: true,
   },
 };
