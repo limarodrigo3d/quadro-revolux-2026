@@ -1,12 +1,13 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
   typescript: {
-    // Isso aqui é o "alvará" para o site subir mesmo se o inspetor reclamar
+    // Mantido o "alvará" para o site subir mesmo com avisos de tipos
     ignoreBuildErrors: true,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  /* A chave 'eslint' foi removida daqui pois nas versões recentes 
+     do Next.js ela não é mais reconhecida neste arquivo.
+  */
 };
 
 export default nextConfig;
